@@ -1,6 +1,5 @@
 #include <iostream>
 
-#include "autodiscovery.h"
 #include "network.h"
 
 int main() {

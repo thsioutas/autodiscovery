@@ -4,13 +4,24 @@
 #include <ifaddrs.h>
 #include <vector>
 
+struct IpV4Address {
+  std::string addr;
+  std::string netmask;
+};
+
+struct IpV6Address {
+  std::string addr;
+  // std::string prefix;
+};
+
 class NetworkInterface {
  public:
   NetworkInterface(std::string name);
   std::string _name;
 
  private:
-  std::vector<std::string> _ipv4_addresses;
+  std::vector<IpV4Address> _ipv4_addresses;
+  std::vector<IpV6Address> _ipv6_addresses;
 };
 
 #endif /* NETWORK_H_ */
