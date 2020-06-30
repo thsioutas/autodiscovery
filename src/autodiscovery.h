@@ -5,6 +5,8 @@
 
 class Autodiscovery {
 public:
+  Autodiscovery(NetworkInterface network_interface)
+      : _network_interface(network_interface) {}
   void Discover();
 
 private:
