@@ -6,8 +6,6 @@
 
 #include "network.h"
 
-const int MAX_ADDR_SIZE = 46;
-
 NetworkInterface::NetworkInterface(std::string name) {
   _name = name;
   std::cout << "Construct network interface: " << _name << std::endl;
