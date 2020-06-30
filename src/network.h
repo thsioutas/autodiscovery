@@ -18,6 +18,9 @@ class NetworkInterface {
 public:
   NetworkInterface(std::string name);
   std::string _name;
+  std::vector<IpV4Address> GetIpv4Addresses();
+  std::vector<IpV6Address> GetIpv6Addresses();
+  bool HasIpv6Address();
 
 private:
   int SetIpAddresses();

@@ -65,3 +65,18 @@ int NetworkInterface::SetIpAddresses() {
   freeifaddrs(interfaces);
   return 0;
 }
+
+std::vector<IpV4Address> NetworkInterface::GetIpv4Addresses() {
+  return _ipv4_addresses;
+}
+
+std::vector<IpV6Address> NetworkInterface::GetIpv6Addresses() {
+  return _ipv6_addresses;
+}
+
+bool NetworkInterface::HasIpv6Address() {
+  if (_ipv6_addresses.size() > 0) {
+    return true;
+  }
+  return false;
+}
