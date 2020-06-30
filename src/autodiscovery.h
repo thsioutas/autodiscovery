@@ -4,10 +4,10 @@
 #include "network.h"
 
 class Autodiscovery {
- public:
+public:
   void Discover();
 
- private:
+private:
   NetworkInterface _network_interface;
 };
 

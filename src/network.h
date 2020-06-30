@@ -15,11 +15,13 @@ struct IpV6Address {
 };
 
 class NetworkInterface {
- public:
+public:
   NetworkInterface(std::string name);
   std::string _name;
 
- private:
+private:
+  int SetIpAddresses();
+
   std::vector<IpV4Address> _ipv4_addresses;
   std::vector<IpV6Address> _ipv6_addresses;
 };
