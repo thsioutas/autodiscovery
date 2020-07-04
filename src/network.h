@@ -21,12 +21,15 @@ public:
   std::vector<IpV4Address> GetIpv4Addresses();
   std::vector<IpV6Address> GetIpv6Addresses();
   bool HasIpv6Address();
+  std::string GetMacAddress();
 
 private:
   int SetIpAddresses();
+  void SetMacAddress();
 
   std::vector<IpV4Address> _ipv4_addresses;
   std::vector<IpV6Address> _ipv6_addresses;
+  std::string _mac;
 };
 
 #endif /* NETWORK_H_ */
